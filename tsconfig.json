@@ -18,13 +18,13 @@
     "lib": ["dom", "dom.iterable", "ES2022"],
     "noEmit": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "incremental": true,
 
     /* Path Aliases */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
     }
@@ -38,5 +38,5 @@
     "**/*.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "assets"]
 }
