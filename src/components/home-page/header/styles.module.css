@@ -1,0 +1,96 @@
+.container-fluid {
+  @apply pr-25
+  pl-25
+  w-full
+  m-auto;
+}
+
+.logo-box {
+  @apply absolute float-left left-0 z-10 p-1 inline-block transition-all duration-300 ease-in-out;
+}
+
+.logo {
+  @apply w-full h-auto;
+}
+
+.nav-container {
+  @apply p-2 px-4
+   text-black text-center
+    relative uppercase text-sm scroll-smooth
+    w-full top-0 transition-colors duration-500
+    z-30
+    flex flex-row justify-start;
+  /* z-index: 99999; */
+  /* padding: 15px 0; */
+  @apply relative
+  flex flex-wrap items-center justify-between py-2 px-4 z-50 w-full top-0 transition duration-500 ease-in-out
+  bg-white bg-opacity-80;
+}
+
+.nav-container-fixed {
+  @apply fixed
+  flex flex-wrap items-center justify-between py-2 px-4 z-50 w-full top-0 transition duration-500 ease-in-out
+  bg-white bg-opacity-80;
+}
+.navbar-nav {
+  @apply flex flex-row;
+}
+
+/* .collapsible:not(.block) {
+  display: none;
+} */
+.navbar-collapse {
+  @apply flex flex-1 items-center;
+}
+
+.nav-collapse-container {
+  @apply flex flex-col
+  ml-auto
+  items-center;
+
+  @apply lg:flex-row;
+}
+
+.nav-link {
+  /* font-size: 15px; */
+  @apply /* m-1
+  mx-3 */
+  p-0 pb-1
+  text-black text-center uppercase
+  relative
+  scroll-smooth
+  block;
+
+  margin: 10px 30px;
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+  @apply no-underline;
+}
+.nav-link::after {
+  @apply hidden
+  content-['']
+  absolute
+  left-0 bottom-0
+  w-full
+  /* h-1 */
+  rounded
+  bg-white;
+  height: 3px;
+  /* display: none;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #ffffff; */
+}
+
+.nav-item.active a::after,
+.nav-item:hover a::after {
+  @apply block bg-barbie-pink;
+}
