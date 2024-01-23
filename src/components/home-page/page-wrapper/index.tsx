@@ -8,5 +8,4 @@ export const PageWrapper = ({ children }: PageWrapperProps) => {
 
 type PageWrapperProps = {
   children?: ReactNode;
-  // any props that come into the component
 };

@@ -1,12 +1,13 @@
 .background-video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  background-size: cover;
-  overflow: hidden;
+  @apply absolute
+    right-0
+    bottom-0
+    min-w-full
+    min-h-full
+    w-auto
+    h-auto
+    z-[-1]
+    bg-cover
+    overflow-hidden
+    object-cover;
 }
