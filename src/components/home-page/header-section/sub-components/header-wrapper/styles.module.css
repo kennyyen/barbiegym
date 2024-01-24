@@ -1,0 +1,12 @@
+.wrapper {
+  @apply h-screen flex flex-col bg-cover bg-fixed relative;
+}
+
+/* .wrapper {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-attachment: fixed;
+} */
