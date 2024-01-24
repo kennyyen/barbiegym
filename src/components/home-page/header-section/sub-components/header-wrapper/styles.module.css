@@ -1,5 +1,5 @@
 .wrapper {
-  @apply h-screen flex flex-col bg-cover bg-fixed relative;
+  @apply h-screen flex flex-col bg-cover bg-fixed relative z-0;
 }
 
 /* .wrapper {
