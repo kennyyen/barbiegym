@@ -4,30 +4,34 @@ import Link from 'next/link';
 
 import { useHeader } from './hooks';
 import styles from './styles.module.css';
+import { HeaderWrapper } from './sub-components/header-wrapper';
+import { VideoBlock } from './sub-components/video-block';
 
-import { LOGO_PATH } from '~/app/constants/path';
+import { HOME_HEADER_VIDEO_PATH, LOGO_PATH } from '~/app/constants/path';
 import { useScrollPage } from '~/components/common/hooks/use-scroll-page';
 
-export const Header = () => {
+export const HeaderSection = () => {
   return (
-    <header>
-      <div className={styles['container-fluid']}>
-        <div className={styles['logo-box']}>
-          <Link href="/">
-            <Image
-              alt=""
-              className={styles.logo}
-              height={1}
-              layout="responsive"
-              src={LOGO_PATH}
-              title=""
-              width={1}
-            />
-          </Link>
+    <HeaderWrapper>
+      <VideoBlock src={HOME_HEADER_VIDEO_PATH} />
+      <header>
+        <div className={styles['container-fluid']}>
+          <div className={styles['logo-box']}>
+            <Link href="/">
+              <Image
+                alt=""
+                className={styles.logo}
+                height={1}
+                layout="responsive"
+                src={LOGO_PATH}
+                title=""
+                width={1}
+              />
+            </Link>
+          </div>
         </div>
-      </div>
-      <nav className={styles['nav-container']}>
-        {/* <button
+        <nav className={styles['nav-container']}>
+          {/* <button
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -38,14 +42,15 @@ export const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button> */}
-        <div
-          className={`${styles.collapsible} ${styles['navbar-collapse']}`}
-          id="navbarSupportedContent"
-        >
-          {renderNavBar()}
-        </div>
-      </nav>
-    </header>
+          <div
+            className={`${styles.collapsible} ${styles['navbar-collapse']}`}
+            id="navbarSupportedContent"
+          >
+            {renderNavBar()}
+          </div>
+        </nav>
+      </header>
+    </HeaderWrapper>
   );
 };
 
