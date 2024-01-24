@@ -1,12 +1,3 @@
 .wrapper {
-  @apply h-screen flex flex-col bg-cover bg-fixed relative;
+  @apply m-0 text-left bg-white text-gray-800 leading-6 font-normal text-base;
 }
-
-/* .wrapper {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-attachment: fixed;
-} */
