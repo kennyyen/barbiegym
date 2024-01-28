@@ -1,0 +1,11 @@
+.us_section {
+    background-image: url(../images/us-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000000;
+    /*text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;*/
+  }
+  
+  .us_container {
+    padding-top: 25px;
+  }
