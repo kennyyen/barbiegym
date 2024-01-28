@@ -10,11 +10,11 @@ interface UsSectionBlockProps {
 
 const UsSectionBlock: React.FC<UsSectionBlockProps> = ({ logo, title, description, aosDelay }) => {
   return (
-    <div className="box" data-aos="fade-up" data-aos-delay={aosDelay}>
-      <div className="img-box">
+    <div className={styles.box} data-aos="fade-up" data-aos-delay={aosDelay}>
+      <div className={styles.imgBox}>
         <img src={logo} alt={title} />
       </div>
-      <div className="detail-box">
+      <div className={styles.detailBox}>
         <h5>{title}</h5>
         <p>{description}</p>
       </div>
