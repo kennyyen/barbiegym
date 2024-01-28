@@ -1,8 +1,8 @@
 import styles from './style.module.css';
 
-export const UsSectionBlock = ({ logo, title, description, aosDelay }: UsSectionBlockProps) => {
+export const UsSectionBlock = ({ logo, title, description}: UsSectionBlockProps) => {
   return (
-    <div className={styles['box']} data-aos="fade-up" data-aos-delay={aosDelay}>
+    <div className={styles['box']}>
       <div className={styles['image-box']}>
         <img src={logo} alt={title} />
       </div>
@@ -18,5 +18,4 @@ interface UsSectionBlockProps {
   logo: string;
   title: string;
   description: string;
-  aosDelay: number;
 };
