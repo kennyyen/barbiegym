@@ -1,20 +1,12 @@
-import React from 'react';
 import styles from './style.module.css';
 
-interface UsSectionBlockProps {
-  logo: string;
-  title: string;
-  description: string;
-  aosDelay: number;
-}
-
-const UsSectionBlock: React.FC<UsSectionBlockProps> = ({ logo, title, description, aosDelay }) => {
+export const UsSectionBlock = ({ logo, title, description, aosDelay }: UsSectionBlockProps) => {
   return (
-    <div className={styles.box} data-aos="fade-up" data-aos-delay={aosDelay}>
-      <div className={styles.imgBox}>
+    <div className={styles['box']} data-aos="fade-up" data-aos-delay={aosDelay}>
+      <div className={styles['image-box']}>
         <img src={logo} alt={title} />
       </div>
-      <div className={styles.detailBox}>
+      <div className={styles['detail-box']}>
         <h5>{title}</h5>
         <p>{description}</p>
       </div>
@@ -22,4 +14,9 @@ const UsSectionBlock: React.FC<UsSectionBlockProps> = ({ logo, title, descriptio
   );
 };
 
-export default UsSectionBlock;
+interface UsSectionBlockProps {
+  logo: string;
+  title: string;
+  description: string;
+  aosDelay: number;
+};
