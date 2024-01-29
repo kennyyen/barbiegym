@@ -1,0 +1,47 @@
+.us-section-block {
+  @apply bg-white bg-opacity-40 rounded-lg shadow-md p-6 text-center;
+}
+
+.us-section-block h3 {
+  @apply mt-0 mb-2 leading-tight text-2xl;
+}
+
+.us-section-block-logo {
+  @apply w-16 h-16 mx-auto mb-4 flex items-center justify-center;
+}
+
+.us-section-block-title {
+  @apply text-xl font-extrabold mb-4 leading-tight text-gray-800;
+}
+
+.us-section-block-description {
+  @apply text-gray-800;
+}
+
+
+@media (min-width: 640px) {
+  .us_section-block-title {
+    @apply text-2xl;
+  }
+}
+
+@media (min-width: 768px) {
+  .us_section-block-title {
+    @apply text-3xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .us_section-block-title {
+    @apply text-5xl;
+  }
+}
+
+.fade-in-block {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-block.is-visible {
+  opacity: 1;
+}
