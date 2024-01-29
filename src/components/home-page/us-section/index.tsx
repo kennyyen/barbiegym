@@ -1,15 +1,22 @@
-import React from 'react';
+"use client"
+
+import React, { use } from 'react';
 import styles from './style.module.css';
 import { US_LOGO1_PATH, US_LOGO2_PATH, US_LOGO3_PATH, US_LOGO4_PATH } from '~/app/constants/path';
 
 import { UsSectionBlock } from './sub-components';
 
+import useAOS from '~/components/hook';
+
 export const UsSection = () => {
+
+  useAOS();
+
   return (
     <section className={styles['us_section']} id="us">
       <div className={styles['container']}>
         <div className={styles['heading_container']}>
-          <h2>Why Choose Us</h2>
+          <h2 data-aos="fade-up" data-aos-delay="150">Why Choose Us</h2>
         </div>
 
         <div className={styles['us_container']}>

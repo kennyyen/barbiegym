@@ -1,5 +1,5 @@
 .us_section-block {
-  @apply bg-black bg-opacity-40 rounded-lg shadow-md p-6 text-center;
+  @apply bg-white bg-opacity-40 rounded-lg shadow-md p-6 text-center;
 }
 
 .us_section-block h3 {
@@ -35,4 +35,13 @@
   .us_section-block-title {
     @apply text-5xl;
   }
+}
+
+.fade-in-block {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-block.is-visible {
+  opacity: 1;
 }
