@@ -1,20 +1,20 @@
-.us_section-block {
+.us-section-block {
   @apply bg-white bg-opacity-40 rounded-lg shadow-md p-6 text-center;
 }
 
-.us_section-block h3 {
+.us-section-block h3 {
   @apply mt-0 mb-2 leading-tight text-2xl;
 }
 
-.us_section-block-logo {
+.us-section-block-logo {
   @apply w-16 h-16 mx-auto mb-4 flex items-center justify-center;
 }
 
-.us_section-block-title {
+.us-section-block-title {
   @apply text-xl font-extrabold mb-4 leading-tight text-gray-800;
 }
 
-.us_section-block-description {
+.us-section-block-description {
   @apply text-gray-800;
 }
 

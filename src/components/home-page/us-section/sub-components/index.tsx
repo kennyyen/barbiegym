@@ -7,10 +7,10 @@ export const UsSectionBlock: React.FC<UsSectionBlockProps> = ({ logo, title, des
 
   useAOS();
   return (
-    <div className={styles['us_section-block']} data-aos="fade-up">
-      <img src={logo} alt={title} className={styles['us_section-block-logo']} data-aos="fade-up" data-aos-delay="150"/>
+    <div className={styles['us-section-block']} data-aos="fade-up">
+      <img src={logo} alt={title} className={styles['us-section-block-logo']} data-aos="fade-up" data-aos-delay="150" />
       <h3 data-aos="fade-up" data-aos-delay="150">{title}</h3>
-      <p className={styles['us_section-block-description']} data-aos="fade-up" data-aos-delay="150">{description}</p>
+      <p className={styles['us-section-block-description']} data-aos="fade-up" data-aos-delay="150">{description}</p>
     </div>
   );
 };
