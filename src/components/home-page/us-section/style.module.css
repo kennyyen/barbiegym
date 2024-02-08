@@ -26,7 +26,7 @@
 .heading_container h2 {
   position: relative;
   text-transform: uppercase;
-  @apply text-6xl font-extrabold leading-tight text-gray-800;
+  @apply text-4xl font-extrabold leading-tight text-gray-800;
 }
 
 .heading_container h2::before {
