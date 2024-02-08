@@ -1,18 +1,20 @@
 import React from 'react';
-import StatmentSection from "./statement-section";
+import StatementSection from "./statement-section";
+import TestimonialSection from "./testimonial-section";
 
-// You can pass the other section as a prop, or import it directly like PricingSection
 export const CombineSection = () => {
     const backgroundStyle = {
-        backgroundImage: 'url(images/gym-bg.jpg)', // Replace with the path to your background image
+        backgroundImage: 'url(images/gym-bg.jpg)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
     };
 
     return (
         <div style={backgroundStyle} className="text-white">
-            <StatmentSection />
+            <StatementSection />
+            <TestimonialSection />
         </div>
     );
 };

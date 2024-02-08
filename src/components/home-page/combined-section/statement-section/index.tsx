@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 
 const StatementSection: React.FC = () => {
@@ -23,7 +24,7 @@ const StatementSection: React.FC = () => {
                                 style={{
                                     borderRadius: '0',
                                     borderWidth: '1.5px',
-                                    transform: 'scale(1)', // Ensure transform property is set for transition effect
+                                    transform: 'scale(1)',
                                 }}
                                 onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
                                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
@@ -38,7 +39,7 @@ const StatementSection: React.FC = () => {
 
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 overflow-auto bg-smoke-light flex">
-                    <div className="relative p-8 bg-white w-full max-w-md m-auto flex-col flex rounded-lg">
+                    <div className="relative p-8 bg-white text-black w-full max-w-md m-auto flex-col flex rounded-lg">
                         <div className="flex justify-between items-center pb-3">
                             <p className="text-2xl font-bold">Modal Demo</p>
                             <div className="cursor-pointer z-50" onClick={toggleModal}>
