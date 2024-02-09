@@ -4,15 +4,15 @@ import TestimonialSection from "./testimonial-section";
 
 export const CombineSection = () => {
     const backgroundStyle = {
-        backgroundImage: 'url(images/gym-bg.jpg)',
+        backgroundImage: `url('images/gym-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: 'scroll',
     };
 
     return (
-        <div style={backgroundStyle} className="text-white">
+        <div style={backgroundStyle} className="text-white ">
             <StatementSection />
             <TestimonialSection />
         </div>
