@@ -7,12 +7,13 @@ export const CombineSection = () => {
         backgroundImage: `url('images/gym-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center center',
         backgroundAttachment: 'scroll',
+        height: '1150px',
     };
 
     return (
-        <div style={backgroundStyle} className="text-white ">
+        <div style={backgroundStyle} className="text-white min-h-full">
             <StatementSection />
             <TestimonialSection />
         </div>
