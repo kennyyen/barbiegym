@@ -1,8 +1,7 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 type Testimonial = {
     id: number;
@@ -16,7 +15,7 @@ const testimonials: Testimonial[] = [
     {
         id: 1,
         content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         clientName: 'Client 1',
         imageUrl: '/images/user-1.png',
     },
@@ -24,7 +23,7 @@ const testimonials: Testimonial[] = [
     {
         id: 2,
         content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         clientName: 'Client 2',
         imageUrl: '/images/user-2.png',
     },
@@ -32,7 +31,7 @@ const testimonials: Testimonial[] = [
     {
         id: 3,
         content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         clientName: 'Client 3',
         imageUrl: '/images/user-3.png',
     },
@@ -46,7 +45,10 @@ const TestimonialSection: React.FC = () => {
     };
 
     const handlePrev = () => {
-        setActiveIndex((currentIndex) => (currentIndex - 1 + testimonials.length) % testimonials.length);
+        setActiveIndex(
+            (currentIndex) =>
+                (currentIndex - 1 + testimonials.length) % testimonials.length,
+        );
     };
 
     useEffect(() => {
@@ -64,40 +66,53 @@ const TestimonialSection: React.FC = () => {
                                 Testimonials
                             </h2>
                         </div>
-                        <div className="relative">
-                            {testimonials.map((testimonial, index) => (
-                                <div
-                                    key={testimonial.id}
-                                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'} flex flex-col items-center justify-center text-center`}
-                                    style={{ height: '400px', padding: '2rem' }}
-                                >
-                                    <img
-                                        src={testimonial.imageUrl}
-                                        alt={`Testimonial from ${testimonial.clientName}`}
-                                        className="rounded-full shadow-lg w-24 h-24 object-cover"
-                                        data-aos="fade-up"
-                                    />
-                                    <p className="text-white my-4" data-aos="fade-up" data-aos-delay="200">{testimonial.content}</p>
-                                    <h4 className="text-gray-400" data-aos="fade-up" data-aos-delay="200">{testimonial.clientName}</h4>
-                                </div>
-                            ))}
+                        <div className="relative block">
+                            <div className="relative block">
+                                {testimonials.map((testimonial, index) => (
+                                    <div
+                                        key={testimonial.id}
+                                        className={`relative inset-0 transition-opacity duration-1000 ease-in-out ${index === activeIndex ? 'opacity-100' : 'hidden'
+                                            } flex flex-col items-center justify-center text-center`}
+                                        style={{ height: '400px', padding: '2rem' }}
+                                    >
+                                        <img
+                                            src={testimonial.imageUrl}
+                                            alt={`Testimonial from ${testimonial.clientName}`}
+                                            className="rounded-full shadow-lg w-24 h-24 object-cover"
+                                            data-aos="fade-up"
+                                        />
+                                        <p
+                                            className="text-white my-4 px-[80px] line-clamp-4 text-ellipsis overflow-hidden lg:whitespace-normal"
+                                            data-aos="fade-up"
+                                            data-aos-delay="200"
+                                        >
+                                            {testimonial.content}
+                                        </p >
+                                        <h4
+                                            className="text-gray-400"
+                                        >
+                                            {testimonial.clientName}
+                                        </h4>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                aria-label="Previous testimonial"
+                                className="absolute top-1/2 left-8 transform -translate-y-1/2 bg-white text-black p-2 rounded-full border-2 border-black shadow-lg flex items-center justify-center hover:bg-gray-300"
+                                onClick={handlePrev}
+                                style={{ width: '45px', height: '45px' }}
+                            >
+                                <FaAngleLeft size={25} />
+                            </button>
+                            <button
+                                aria-label="Next testimonial"
+                                className="absolute top-1/2 right-8 transform -translate-y-1/2 bg-white text-black p-2 rounded-full border-2 border-black shadow-lg flex items-center justify-center hover:bg-gray-300"
+                                onClick={handleNext}
+                                style={{ width: '45px', height: '45px' }}
+                            >
+                                <FaAngleRight size={25} />
+                            </button>
                         </div>
-                        <button
-                            aria-label="Previous testimonial"
-                            className="absolute top-1/2 left-8 mt-[10rem] transform -translate-y-1/2 bg-white text-black p-2 rounded-full border-2 border-black shadow-lg flex items-center justify-center hover:bg-gray-300"
-                            onClick={handlePrev}
-                            style={{ width: '45px', height: '45px' }}
-                        >
-                            <FaAngleLeft size={25} />
-                        </button>
-                        <button
-                            aria-label="Next testimonial"
-                            className="absolute top-1/2 right-8 mt-[10rem] transform -translate-y-1/2 bg-white text-black p-2 rounded-full border-2 border-black shadow-lg flex items-center justify-center hover:bg-gray-300"
-                            onClick={handleNext}
-                            style={{ width: '45px', height: '45px' }}
-                        >
-                            <FaAngleRight size={25} />
-                        </button>
                     </div>
                 </div>
             </div>

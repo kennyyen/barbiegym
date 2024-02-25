@@ -6,10 +6,9 @@ export const CombineSection = () => {
     const backgroundStyle = {
         backgroundImage: `url('images/gym-bg.jpg')`,
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'repeat',
         backgroundPosition: 'center center',
-        backgroundAttachment: 'scroll',
-        height: '1150px',
+        backgroundAttachment: 'scroll'
     };
 
     return (
