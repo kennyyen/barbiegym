@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import styles from './styles.module.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useCombinedSection } from './hooks';
 
@@ -56,14 +58,16 @@ const TestimonialSection: React.FC = () => {
                     } flex flex-col items-center justify-center text-center`}
                     style={{ height: '400px', padding: '2rem' }}
                   >
-                    <img
+                    <Image
                       alt={`Testimonial from ${testimonial.clientName}`}
                       className="rounded-full shadow-lg w-24 h-24 object-cover"
                       data-aos="fade-up"
+                      height={96}
                       src={testimonial.imageUrl}
+                      width={96}
                     />
                     <p
-                      className="text-white my-4 px-[80px] line-clamp-4 text-ellipsis overflow-hidden lg:whitespace-normal"
+                      className={styles['testimonial-content']}
                       data-aos="fade-up"
                       data-aos-delay="200"
                     >
